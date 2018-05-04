@@ -42,7 +42,7 @@ class Product extends Controller
 
         return json($recetDaat);
     }
-    
+
     // 获取登录信息
     public function getInfo()
     {
@@ -51,7 +51,7 @@ class Product extends Controller
         //echo $registerUrl;die;
         $this->curl->set('CURLOPT_HTTPHEADER', array('Content-Type' => 'application/x-www-form-urlencoded'))
             ->post(http_build_query($authtoken))->url($registerUrl);
-
+        
         $content = $this->curl->data();
 
         if (is_null(json_decode($content))) {
