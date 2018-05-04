@@ -1,0 +1,218 @@
+{include file="layout/head" /}
+
+<article class="page-container">
+    <form class="form form-horizontal" id="form-admin-add">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">位置类型：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <span class="select-box" style="width:150px;">
+                    <select class="select" name="type" size="1">
+                        <option value="PC版">PC版</option>
+                    </select>
+			    </span>
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">
+                <span class="c-red">*</span>位置名称：
+            </label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text"
+                       value="{php}if(isset($returnData)&&isset($returnData['name'])){echo $returnData['name'];}{/php}"
+                       placeholder="位置名称" id="name" name="name">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">
+                <span class="c-red">*</span>位置代码：
+            </label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" autocomplete="off"
+                       value="{php}if(isset($returnData)&&isset($returnData['code'])){echo $returnData['code'];}{/php}"
+                       placeholder="位置代码" id="code"
+                       name="code">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>建议宽度：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" autocomplete="off" placeholder="建议宽度" id="password2"
+                       name="width"
+                       value="{php}if(isset($returnData)&&isset($returnData['width'])){echo $returnData['width'];}{/php}">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>建议高度：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text"
+                       value="{php}if(isset($returnData)&&isset($returnData['heigth'])){echo $returnData['heigth'];}{/php}"
+                       placeholder="建议高度" id="heigth" name="heigth">
+            </div>
+        </div>
+
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">备注：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <textarea name="description" cols="" rows="" class="textarea" placeholder="说点什么...100个字符以内"
+                          dragonfly="true"
+                          onKeyUp="Huitextarealength(this,100)" value="">{php}if(isset($returnData)&&isset($returnData['description'])){echo $returnData['description'];}{/php}</textarea>
+                <p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+        <input type="hidden" name="id"
+               value="{php}if(isset($returnData)&&isset($returnData['id'])){echo $returnData['id'];}{/php}">
+    </form>
+</article>
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript"
+        src="{$Think.config.web_res_root}admin/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript"
+        src="{$Think.config.web_res_root}admin/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript"
+        src="{$Think.config.web_res_root}admin/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+
+<script type="text/javascript">
+    /**
+     * 检查数字是否超出
+     */
+    function Huitextarealength(obj, length) {
+
+        var len = getStrLength(obj.value);
+        var current = length - len;
+
+        if (current <= -1) {
+            $(".textarea").val(obj.value.substring(0, 100));
+        } else {
+            $(".textarea-length").html(current);
+        }
+    }
+
+    function readyHuitextarealength(obj, length) {
+
+        var len = getStrLength(obj.text());
+        var current = length - len;
+
+        if (current <= -1) {
+            $(".textarea").val(obj.text().substring(0, 100));
+        } else {
+            $(".textarea-length").html(current);
+        }
+    }
+
+    // 中文字符判断
+    function getStrLength(str) {
+        var len = str.length;
+        var reLen = 0;
+        for (var i = 0; i < len; i++) {
+            if (str.charCodeAt(i) < 27 || str.charCodeAt(i) > 126) {
+                // 全角
+                reLen += 2;
+            } else {
+                reLen++;
+            }
+        }
+        return reLen;
+    }
+
+
+    $(function () {
+        $('.skin-minimal input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue',
+            increaseArea: '20%'
+        });
+
+        readyHuitextarealength($(".textarea"), '100');
+
+        //form 表单
+        $("#form-admin-add").validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 50
+                },
+                code: {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 20
+                },
+                width: {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 4
+                },
+                heigth: {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 4
+                },
+            },
+            onkeyup: false,
+            focusCleanup: true,
+            success: "valid",
+            submitHandler: function (form) {
+                var index = layer.load(0, {
+                    shade: [0.2, '#717171'] //0.1透明度的白色背景
+                });
+
+                $(form).ajaxSubmit({
+                    type: 'post',
+                    url: "{:Url('Adds/doAddLocation')}",
+                    success: function (data) {
+                        if (data.error_code == '10000') {
+                            var strs = "";
+                            if (data.msg.hasOwnProperty('code')) {
+                                strs += data.msg.code + "<br>";
+                            }
+                            if (data.msg.hasOwnProperty('heigth')) {
+                                strs += data.msg.heigth + "<br>";
+                            }
+                            if (data.msg.hasOwnProperty('name')) {
+                                strs += data.msg.name + "<br>";
+                            }
+                            if (data.msg.hasOwnProperty('width')) {
+                                strs += data.msg.width + "<br>";
+                            }
+                            layer.msg(strs);
+                            layer.closeAll('loading');
+                            return false;
+                        } else if (data.error_code == '10006') {
+                            layer.msg('未知错误,请刷新页面');
+                            layer.closeAll('loading');
+                            return false;
+                        } else if (data.code == '200') {
+                            setTimeout(function () {
+                                layer.alert(data.msg, {
+                                    skin: 'layui-layer-molv' //样式类名
+                                    , closeBtn: 0
+                                }, function () {
+                                    parent.$('.Hui-iconfont-refer').click();
+                                    parent.layer.close(index);
+                                    layer.closeAll('loading');
+                                });
+                            }, 1000);
+                        } else {
+                            layer.msg('error!', {icon: 1, time: 1000});
+                        }
+                    },
+                    error: function (XmlHttpRequest, textStatus, errorThrown) {
+                        layer.msg('error!', {icon: 1, time: 1000});
+                    }
+                });
+
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

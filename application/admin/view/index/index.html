@@ -1,0 +1,169 @@
+{include file="layout/head" /}
+{include file="layout/nav" /}
+{include file="layout/menu" /}
+
+<section class="Hui-article-box">
+	{include file="layout/title" /}
+	<div id="iframe_box" class="Hui-article">
+		<div class="show_iframe">
+			<div style="display:none" class="loading"></div>
+			<div class="page-container">
+				<p class="f-20 text-success">欢迎使用H-ui.admin <span class="f-14">v3.1</span>后台模版！</p>
+				<p>登录次数：18 </p>
+				<p>上次登录IP：222.35.131.79.1 上次登录时间：2014-6-14 11:19:55</p>
+				<table class="table table-border table-bordered table-bg">
+					<thead>
+					<tr>
+						<th colspan="7" scope="col">信息统计</th>
+					</tr>
+					<tr class="text-c">
+						<th>统计</th>
+						<th>资讯库</th>
+						<th>图片库</th>
+						<th>产品库</th>
+						<th>用户</th>
+						<th>管理员</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="text-c">
+						<td>总数</td>
+						<td>92</td>
+						<td>9</td>
+						<td>0</td>
+						<td>8</td>
+						<td>20</td>
+					</tr>
+					<tr class="text-c">
+						<td>今日</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+					</tr>
+					<tr class="text-c">
+						<td>昨日</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+					</tr>
+					<tr class="text-c">
+						<td>本周</td>
+						<td>2</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+					</tr>
+					<tr class="text-c">
+						<td>本月</td>
+						<td>2</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+					</tr>
+					</tbody>
+				</table>
+				<table class="table table-border table-bordered table-bg mt-20">
+					<thead>
+					<tr>
+						<th colspan="2" scope="col">服务器信息</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<!--'操作系统' => string 'WINNT' (length=5)-->
+						<!--'运行环境' => string 'Apache/2.4.23 (Win32) PHP/5.6.25' (length=32)-->
+						<!--'主机名' => string 'local.o2o.com' (length=13)-->
+						<!--'WEB服务端口' => string '80' (length=2)-->
+						<!--'网站文档目录' => string 'D:/wamp/www/o2o/public' (length=22)-->
+						<!--'浏览器信息' => string 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)' (length=40)-->
+						<!--'通信协议' => string 'HTTP/1.1' (length=8)-->
+						<!--'请求方法' => string 'GET' (length=3)-->
+						<!--'ThinkPHP版本' => string '5.0.10' (length=6)-->
+						<!--'上传附件限制' => string '2M' (length=2)-->
+						<!--'执行时间限制' => string '0秒' (length=4)-->
+						<!--'服务器时间' => string '2017年8月22日 16:31:23' (length=25)-->
+						<!--'北京时间' => string '2017年8月22日 16:31:23' (length=25)-->
+						<!--'服务器域名/IP' => string 'local.o2o.com [ 127.0.0.1 ]' (length=27)-->
+						<!--'用户的IP地址' => string '127.0.0.1' (length=9)-->
+						<!--'剩余空间' => string '290470.26M' (length=10)-->
+						
+						<th width="30%">操作系统</th>
+						<td><span id="lbServerName">{$serverInfo['操作系统']}</span></td>
+					</tr>
+					<tr>
+						<td>运行环境</td>
+						<td>{$serverInfo['运行环境']}</td>
+					</tr>
+					<tr>
+						<td>主机名</td>
+						<td>{$serverInfo['主机名']}</td>
+					</tr>
+					<tr>
+						<td>WEB服务端口</td>
+						<td>{$serverInfo['WEB服务端口']}</td>
+					</tr>
+					<tr>
+						<td>网站文档目录</td>
+						<td>{$serverInfo['网站文档目录']}</td>
+					</tr>
+					<tr>
+						<td>浏览器信息</td>
+						<td>{$serverInfo['浏览器信息']}</td>
+					</tr>
+					<tr>
+						<td>通信协议</td>
+						<td>{$serverInfo['通信协议']}</td>
+					</tr>
+					<tr>
+						<td>请求方法</td>
+						<td>{$serverInfo['请求方法']}</td>
+					</tr>
+					<tr>
+						<td>ThinkPHP版本</td>
+						<td>{$serverInfo['ThinkPHP版本']}</td>
+					</tr>
+					<tr>
+						<td>上传附件限制</td>
+						<td>{$serverInfo['上传附件限制']}</td>
+					</tr>
+					<tr>
+						<td>执行时间限制</td>
+						<td>{$serverInfo['执行时间限制']}</td>
+					</tr>
+					<tr>
+						<td>北京时间</td>
+						<td>{$serverInfo['北京时间']}</td>
+					</tr>
+					<tr>
+						<td>服务器域名/IP</td>
+						<td>{$serverInfo['服务器域名/IP']}</td>
+					</tr>
+					<tr>
+						<td>用户的IP地址</td>
+						<td>{$serverInfo['用户的IP地址']}</td>
+					</tr>
+					<tr>
+						<td>剩余空间</td>
+						<td>{$serverInfo['剩余空间']}</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<footer class="footer mt-20">
+				<div class="container">
+					<p>
+						感谢jQuery、layer、laypage、Validform、UEditor、My97DatePicker、iconfont、Datatables、WebUploaded、icheck、highcharts、bootstrap-Switch<br>
+						Copyright &copy;2015-2017 H-ui.admin v3.1 All Rights Reserved.<br>
+						本后台系统由<a href="http://www.h-ui.net/" target="_blank" title="H-ui前端框架">H-ui前端框架</a>提供前端技术支持</p>
+				</div>
+			</footer>
+		</div>
+	</div>
+</section>
+
