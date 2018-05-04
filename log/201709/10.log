@@ -1,0 +1,117 @@
+---------------------------------------------------------------
+[ 2017-09-10T16:06:10+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme?id=1&XDEBUG_SESSION_START=14316
+[ info ] local.o2o.com/api/v1/Theme?id=1&XDEBUG_SESSION_START=14316 [运行时间：1.518087s][吞吐率：0.66req/s] [内存消耗：3,068.13kb] [文件加载：51]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.121007s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme` [ RunTime:0.076004s ]
+[ sql ] [ SQL ] SELECT * FROM `theme` WHERE  `id` IN (1) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (49) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-09-10T16:07:11+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme?id=1,2,3
+[ info ] local.o2o.com/api/v1/Theme?id=1,2,3 [运行时间：0.421024s][吞吐率：2.38req/s] [内存消耗：3,069.63kb] [文件加载：51]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme` [ RunTime:0.047003s ]
+[ sql ] [ SQL ] SELECT * FROM `theme` WHERE  `id` IN (1,2,3) [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16,17,18) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (49,50,18) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-09-10T17:50:34+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme/1
+[ error ] [8192]Non-static method app\api\model\Theme::getThmemProducts() should not be called statically, assuming $this from incompatible context
+[ error ] 测试日志信息，这是警告级别
+---------------------------------------------------------------
+[ 2017-09-10T17:50:36+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme/1
+[ error ] [8192]Non-static method app\api\model\Theme::getThmemProducts() should not be called statically, assuming $this from incompatible context
+[ error ] 测试日志信息，这是警告级别
+---------------------------------------------------------------
+[ 2017-09-10T17:50:37+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme/1
+[ error ] [8192]Non-static method app\api\model\Theme::getThmemProducts() should not be called statically, assuming $this from incompatible context
+[ error ] 测试日志信息，这是警告级别
+---------------------------------------------------------------
+[ 2017-09-10T17:50:37+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme/1
+[ error ] [8192]Non-static method app\api\model\Theme::getThmemProducts() should not be called statically, assuming $this from incompatible context
+[ error ] 测试日志信息，这是警告级别
+---------------------------------------------------------------
+[ 2017-09-10T17:50:51+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme/1
+[ error ] [1]Class 'app\api\model\Prodeuct' not found
+[ error ] 测试日志信息，这是警告级别
+---------------------------------------------------------------
+[ 2017-09-10T17:51:09+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme/1
+[ sql ] [ DB ] CONNECT:[ UseTime:2.704155s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme` [ RunTime:1.990114s ]
+[ sql ] [ SQL ] SELECT * FROM `theme` WHERE  `id` = 1 [ RunTime:0.171010s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme_product` [ RunTime:0.059003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.131008s ]
+[ sql ] [ SQL ] SELECT `product`.*,pivot.theme_id AS pivot__theme_id,pivot.product_id AS pivot__product_id FROM `product` INNER JOIN `theme_product` `pivot` ON `pivot`.`product_id`=`product`.`id` WHERE  `pivot`.`theme_id` IN (1) [ RunTime:0.190011s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.105006s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16) [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (49) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-09-10T17:51:28+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme/1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.052003s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme` [ RunTime:0.050002s ]
+[ sql ] [ SQL ] SELECT * FROM `theme` WHERE  `id` = 1 [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme_product` [ RunTime:0.031002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `product`.*,pivot.theme_id AS pivot__theme_id,pivot.product_id AS pivot__product_id FROM `product` INNER JOIN `theme_product` `pivot` ON `pivot`.`product_id`=`product`.`id` WHERE  `pivot`.`theme_id` IN (1) [ RunTime:0.016000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (49) [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2017-09-10T17:51:45+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme/1
+[ info ] local.o2o.com/api/v1/Theme/1 [运行时间：0.792045s][吞吐率：1.26req/s] [内存消耗：3,271.73kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.041002s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT * FROM `theme` WHERE  `id` = 1 [ RunTime:0.068004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme_product` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT `product`.*,pivot.theme_id AS pivot__theme_id,pivot.product_id AS pivot__product_id FROM `product` INNER JOIN `theme_product` `pivot` ON `pivot`.`product_id`=`product`.`id` WHERE  `pivot`.`theme_id` IN (1) [ RunTime:0.044003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (49) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-09-10T17:53:15+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme?id=1,2,3
+[ info ] local.o2o.com/api/v1/Theme?id=1,2,3 [运行时间：0.562032s][吞吐率：1.78req/s] [内存消耗：3,071.97kb] [文件加载：51]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.107006s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme` [ RunTime:0.039003s ]
+[ sql ] [ SQL ] SELECT * FROM `theme` WHERE  `id` IN (1,2,3) [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16,17,18) [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (49,50,18) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-09-10T18:11:16+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme/1
+[ info ] local.o2o.com/api/v1/Theme/1 [运行时间：0.740042s][吞吐率：1.35req/s] [内存消耗：3,273.88kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.124007s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme` [ RunTime:0.151009s ]
+[ sql ] [ SQL ] SELECT * FROM `theme` WHERE  `id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme_product` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `product`.*,pivot.theme_id AS pivot__theme_id,pivot.product_id AS pivot__product_id FROM `product` INNER JOIN `theme_product` `pivot` ON `pivot`.`product_id`=`product`.`id` WHERE  `pivot`.`theme_id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (49) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-09-10T18:11:27+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme/1
+[ info ] local.o2o.com/api/v1/Theme/1 [运行时间：0.532031s][吞吐率：1.88req/s] [内存消耗：3,274.24kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.051003s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme` [ RunTime:0.047003s ]
+[ sql ] [ SQL ] SELECT * FROM `theme` WHERE  `id` = 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme_product` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `product`.*,pivot.theme_id AS pivot__theme_id,pivot.product_id AS pivot__product_id FROM `product` INNER JOIN `theme_product` `pivot` ON `pivot`.`product_id`=`product`.`id` WHERE  `pivot`.`theme_id` IN (1) [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (49) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-09-10T18:12:57+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme/1
+[ info ] local.o2o.com/api/v1/Theme/1 [运行时间：0.535030s][吞吐率：1.87req/s] [内存消耗：3,275.24kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme` [ RunTime:0.045002s ]
+[ sql ] [ SQL ] SELECT * FROM `theme` WHERE  `id` = 1 [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme_product` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `product`.*,pivot.theme_id AS pivot__theme_id,pivot.product_id AS pivot__product_id FROM `product` INNER JOIN `theme_product` `pivot` ON `pivot`.`product_id`=`product`.`id` WHERE  `pivot`.`theme_id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.063004s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16) [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (49) [ RunTime:0.002000s ]

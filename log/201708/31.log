@@ -1,0 +1,12 @@
+---------------------------------------------------------------
+[ 2017-08-31T13:02:28+08:00 ] 127.0.0.1 127.0.0.1 GET /getInsert
+[ info ] local.o2o.com/getInsert [运行时间：0.793045s][吞吐率：1.26req/s] [内存消耗：7,231.36kb] [文件加载：39]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=test_chengtou;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wp_sign_data` [ RunTime:0.151009s ]
+[ sql ] [ SQL ] SELECT * FROM `wp_sign_data` [ RunTime:0.213012s ]
+---------------------------------------------------------------
+[ 2017-08-31T13:02:31+08:00 ] 127.0.0.1 127.0.0.1 GET /getInsert
+[ info ] local.o2o.com/getInsert [运行时间：0.530030s][吞吐率：1.89req/s] [内存消耗：7,231.02kb] [文件加载：39]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.048003s ] mysql:dbname=test_chengtou;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wp_sign_data` [ RunTime:0.047003s ]
+[ sql ] [ SQL ] SELECT * FROM `wp_sign_data` [ RunTime:0.067004s ]

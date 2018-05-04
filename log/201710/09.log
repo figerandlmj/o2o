@@ -1,0 +1,14 @@
+---------------------------------------------------------------
+[ 2017-10-09T11:24:11+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/inportExcel
+[ info ] local.o2o.com/admin/inportExcel [运行时间：26.727528s][吞吐率：0.04req/s] [内存消耗：10,476.23kb] [文件加载：94]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select wau.name,wau.mobile,from_unixtime(zjtime) as zjtime,cid,county,secondary_units,company,wau.openid from wp_activity_user wau 
+left join wp_lucky_follow as wlf on wlf.follow_id=wau.openid
+where wlf.award_id='30' and wlf.zjtime<='1506319800' and wau.name!='' order by wau.id asc; [ RunTime:1.232071s ]
+---------------------------------------------------------------
+[ 2017-10-09T11:28:33+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/inportExcel
+[ info ] local.o2o.com/admin/inportExcel [运行时间：84.536835s][吞吐率：0.01req/s] [内存消耗：21,930.30kb] [文件加载：94]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select wau.id,wau.name,wau.mobile,from_unixtime(zjtime) as zjtime,cid,county,secondary_units,company,wau.openid from wp_activity_user wau 
+left join wp_lucky_follow as wlf on wlf.follow_id=wau.openid
+where wlf.award_id='30' and wlf.zjtime>'1506319800' and wau.name!='' order by wau.id asc ; [ RunTime:1.143065s ]

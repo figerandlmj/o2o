@@ -1,0 +1,74 @@
+---------------------------------------------------------------
+[ 2017-09-03T10:32:03+08:00 ] 127.0.0.1 127.0.0.1 GET /banner/1
+[ info ] local.o2o.com/banner/1 [运行时间：1.303075s][吞吐率：0.77req/s] [内存消耗：3,076.30kb] [文件加载：49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.039002s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.426024s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.103006s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.183011s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `id` IN (65,2,3,1) [ RunTime:0.042002s ]
+---------------------------------------------------------------
+[ 2017-09-03T10:39:16+08:00 ] 127.0.0.1 127.0.0.1 GET /banner/1
+[ info ] local.o2o.com/banner/1 [运行时间：0.453026s][吞吐率：2.21req/s] [内存消耗：3,076.95kb] [文件加载：49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `id` IN (65,2,3,1) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-09-03T10:39:38+08:00 ] 127.0.0.1 127.0.0.1 GET /banner/1
+[ info ] local.o2o.com/banner/1 [运行时间：0.475027s][吞吐率：2.11req/s] [内存消耗：3,077.13kb] [文件加载：49]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020001s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.030002s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `id` IN (65,2,3,1) [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2017-09-03T10:45:53+08:00 ] 127.0.0.1 127.0.0.1 GET /banner/1
+[ info ] local.o2o.com/banner/1 [运行时间：0.450025s][吞吐率：2.22req/s] [内存消耗：3,109.45kb] [文件加载：50]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029001s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.039003s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (65,2,3,1) [ RunTime:0.013001s ]
+---------------------------------------------------------------
+[ 2017-09-03T10:46:53+08:00 ] 127.0.0.1 127.0.0.1 GET /banner/1
+[ info ] local.o2o.com/banner/1 [运行时间：0.467027s][吞吐率：2.14req/s] [内存消耗：3,110.07kb] [文件加载：50]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.057003s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (65,2,3,1) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-09-03T16:16:10+08:00 ] 127.0.0.1 127.0.0.1 GET /banner/1
+[ info ] local.o2o.com/banner/1 [运行时间：4.329247s][吞吐率：0.23req/s] [内存消耗：3,140.29kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:1.714098s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:1.505086s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.150009s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.050003s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.026001s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.036002s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (65,2,3,1) [ RunTime:0.064004s ]
+---------------------------------------------------------------
+[ 2017-09-03T16:37:05+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/banner/1
+[ info ] local.o2o.com/api/v1/banner/1 [运行时间：0.476027s][吞吐率：2.10req/s] [内存消耗：3,140.33kb] [文件加载：52]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028002s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (65,2,3,1) [ RunTime:0.001000s ]

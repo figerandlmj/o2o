@@ -1,0 +1,6 @@
+---------------------------------------------------------------
+[ 2017-11-02T13:59:32+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/user
+[ info ] local.o2o.com/api/v1/token/user [运行时间：0.692039s][吞吐率：1.45req/s] [内存消耗：3,362.21kb] [文件加载：66]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.128007s ] mysql:dbname=o2o_new;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.138008s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'o2GMe0c79nRF8c-WgtpD6Enxrm2U' LIMIT 1 [ RunTime:0.041002s ]

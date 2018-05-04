@@ -1,0 +1,103 @@
+---------------------------------------------------------------
+[ 2017-10-29T20:29:17+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/category/all
+[ info ] local.o2o.com/api/v1/category/all [运行时间：4.568261s][吞吐率：0.22req/s] [内存消耗：3,307.06kb] [文件加载：60]
+[ sql ] [ DB ] CONNECT:[ UseTime:1.823105s ] mysql:dbname=o2o_new;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:1.269072s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.086005s ]
+[ sql ] [ SQL ] SELECT * FROM `category` [ RunTime:0.026002s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (6,5,7,4,8,9) [ RunTime:0.177010s ]
+---------------------------------------------------------------
+[ 2017-10-29T20:32:49+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme?id=1,2,3
+[ info ] local.o2o.com/api/v1/Theme?id=1,2,3 [运行时间：1.651094s][吞吐率：0.61req/s] [内存消耗：3,365.54kb] [文件加载：62]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033002s ] mysql:dbname=o2o_new;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme` [ RunTime:1.034059s ]
+[ sql ] [ SQL ] SELECT * FROM `theme` WHERE  `id` IN (1,2,3) [ RunTime:0.032002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.211012s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16,17,18) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (49,50,18) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-10-29T20:33:12+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/banner/1
+[ info ] local.o2o.com/api/v1/banner/1 [运行时间：0.679039s][吞吐率：1.47req/s] [内存消耗：3,428.34kb] [文件加载：63]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023002s ] mysql:dbname=o2o_new;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.230013s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.199012s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (65,2,3,1) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-10-29T20:34:16+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme?id=1
+[ info ] local.o2o.com/api/v1/Theme?id=1 [运行时间：0.092005s][吞吐率：10.87req/s] [内存消耗：3,364.00kb] [文件加载：62]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=o2o_new;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `theme` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (49) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-10-29T20:42:38+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme?id=1
+[ info ] local.o2o.com/api/v1/Theme?id=1 [运行时间：0.087005s][吞吐率：11.49req/s] [内存消耗：3,364.00kb] [文件加载：62]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=o2o_new;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `theme` WHERE  `id` IN (1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (49) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-10-29T20:46:10+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/Theme?id=1,2,3
+[ info ] local.o2o.com/api/v1/Theme?id=1,2,3 [运行时间：0.110006s][吞吐率：9.09req/s] [内存消耗：3,365.71kb] [文件加载：62]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=o2o_new;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `theme` [ RunTime:0.028002s ]
+[ sql ] [ SQL ] SELECT * FROM `theme` WHERE  `id` IN (1,2,3) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (16,17,18) [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (49,50,18) [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2017-10-29T21:17:30+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/category/childData?categoryId=2
+[ info ] local.o2o.com/api/v1/category/childData?categoryId=2 [运行时间：0.116007s][吞吐率：8.62req/s] [内存消耗：3,335.51kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=o2o_new;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `category` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` IN (2,3,4,5,6,7) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-10-29T21:17:31+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/category/childData?categoryId=2
+[ info ] local.o2o.com/api/v1/category/childData?categoryId=2 [运行时间：0.172010s][吞吐率：5.81req/s] [内存消耗：3,335.51kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=o2o_new;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.026002s ]
+[ sql ] [ SQL ] SELECT * FROM `category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` IN (2,3,4,5,6,7) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-10-29T21:18:23+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/category/childData?categoryId=2
+[ info ] local.o2o.com/api/v1/category/childData?categoryId=2 [运行时间：0.140008s][吞吐率：7.14req/s] [内存消耗：3,320.57kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=o2o_new;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.045003s ]
+[ sql ] [ SQL ] SELECT * FROM `category` WHERE  `id` = 2 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` IN (2) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2017-10-29T21:18:24+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/category/childData?categoryId=2
+[ info ] local.o2o.com/api/v1/category/childData?categoryId=2 [运行时间：0.145008s][吞吐率：6.90req/s] [内存消耗：3,320.57kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=o2o_new;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.038002s ]
+[ sql ] [ SQL ] SELECT * FROM `category` WHERE  `id` = 2 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` IN (2) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-10-29T21:19:07+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/category/childData?categoryId=2
+[ info ] local.o2o.com/api/v1/category/childData?categoryId=2 [运行时间：0.080005s][吞吐率：12.50req/s] [内存消耗：3,323.75kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=o2o_new;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `category` WHERE  `id` = 2 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` IN (2) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-10-29T21:19:43+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/category/childData?categoryId=2
+[ info ] local.o2o.com/api/v1/category/childData?categoryId=2 [运行时间：0.129007s][吞吐率：7.75req/s] [内存消耗：3,320.57kb] [文件加载：61]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=o2o_new;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.043002s ]
+[ sql ] [ SQL ] SELECT * FROM `category` WHERE  `id` = 2 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` IN (2) [ RunTime:0.001001s ]

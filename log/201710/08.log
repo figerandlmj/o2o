@@ -1,0 +1,9 @@
+---------------------------------------------------------------
+[ 2017-10-08T14:42:27+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/inportExcel
+[ info ] local.o2o.com/admin/inportExcel [运行时间：47.701728s][吞吐率：0.02req/s] [内存消耗：14,249.35kb] [文件加载：94]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008001s ] mysql:dbname=o2o;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select wau.name,wau.mobile,from_unixtime(zjtime) as zjtime,wfc.cardno,wfc.cardPwd,cid,county,secondary_units,company from wp_activity_user wau 
+left join wp_lucky_follow as wlf on wlf.follow_id=wau.openid
+left join wp_uid_firtycard as wuf on wuf.uid=wau.openid
+left join wp_firty_cardno as wfc on wfc.id=wuf.firtyCardnoid
+where wlf.award_id='27' and wau.name!='' order by wau.id asc ; [ RunTime:1.244071s ]
