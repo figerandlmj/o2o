@@ -56,8 +56,6 @@ class OrderPlace extends BaseValidate
                 'msg' => '商品列表参数错误',
             ]);
         }
-
-
     }
 
 }
