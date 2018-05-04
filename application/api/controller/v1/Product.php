@@ -42,7 +42,7 @@ class Product extends Controller
 
         return json($recetDaat);
     }
-
+    
     // 获取登录信息
     public function getInfo()
     {
