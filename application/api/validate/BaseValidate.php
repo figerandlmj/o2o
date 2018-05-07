@@ -80,6 +80,7 @@ class BaseValidate extends Validate
 
     public function getDataByRule($arrs)
     {
+        var_export($arrs);die;
         /**
          * 如果传递的参数中有 uid user_id 就是恶意请求
          */

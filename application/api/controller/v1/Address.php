@@ -42,13 +42,12 @@ class Address extends BaseController
 
         //  用uid 去获取用户地址 是否存在
         $user = UserModel::get($uid);
-
         $userAddress = $user->address;
 
         if (!$user) {
             throw new UserException();
         }
-
+        
         $address = $validate->getDataByRule(input('post.'));
        
         if (!$userAddress) {

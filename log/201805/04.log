@@ -10,3 +10,9 @@
 [ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=o2o_new;host=127.0.0.1;port=3306;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.024002s ]
 [ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'o2GMe0c79nRF8c-WgtpD6Enxrm2U' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-05-04T17:15:24+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v1/token/user
+[ info ] local.o2o.com/api/v1/token/user [运行时间：0.999057s][吞吐率：1.00req/s] [内存消耗：3,393.18kb] [文件加载：66]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.296017s ] mysql:dbname=o2o_new;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.163009s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'o2GMe0c79nRF8c-WgtpD6Enxrm2U' LIMIT 1 [ RunTime:0.058004s ]
