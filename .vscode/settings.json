@@ -1,0 +1,151 @@
+{
+    "editor.fontSize": 16,
+    "editor.rulers": [
+        120
+    ],
+    "editor.lineHeight": 24,
+    "editor.mouseWheelZoom": true,
+    "editor.mouseWheelScrollSensitivity": 5,
+    "editor.smoothScrolling": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnPaste": true,
+    "editor.renderWhitespace": "all",
+    "editor.renderIndentGuides": true,
+    "editor.wordWrap": "off",
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.renderCharacters": false,
+    "editor.renderLineHighlight": "all",
+    "editor.cursorBlinking": "phase",
+    "editor.wrappingIndent": "none",
+    "editor.minimap.side": "left",
+    "files.autoSave": "onWindowChange",
+    "files.eol": "\n",
+    "php.validate.run": "onType",
+    "php.validate.executablePath": "D:/wamp/bin/php/php5.6.25/php.exe",
+    "git.confirmSync": false,
+    "git.path": "C:/greenEnvironment/git/2.12.1/bin/git.exe",
+    "explorer.autoReveal": false,
+    "window.title": "Grass's Visual Studio Code ➤ ${dirty}${activeEditorLong}",
+    "emmet.triggerExpansionOnTab": true,
+    "namespaceResolver.showMessageOnStatusBar": true,
+    "namespaceResolver.autoSort": false,
+    "terminal.integrated.fontSize": 18,
+    "explorer.confirmDelete": false,
+    "git.autofetch": true,
+    "workbench.iconTheme": "vscode-great-icons",
+    "extensions.ignoreRecommendations": true,
+    "workbench.colorTheme": "monokai-chacoral(HC)",
+    "window.zoomLevel": 0,
+    "debug.inlineValues": true,
+    "debug.internalConsoleOptions": "neverOpen",
+    "debug.showInStatusBar": "always",
+    "explorer.confirmDragAndDrop": false,
+    "search.useIgnoreFiles": false,
+    "diffEditor.renderSideBySide": false,
+    "window.newWindowDimensions": "maximized",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "editor.minimap.enabled": false,
+    "commands.commands": [
+        {
+            "text": "$(file-symlink-directory)",
+            "command": "projectManager.listProjectsNewWindow",
+            "tooltip": "Switch Project in new window",
+            "color": "#FFFF00"
+        },
+        {
+            "text": "$(gear)",
+            "command": "workbench.action.openGlobalSettings",
+            "tooltip": "Settings"
+        },
+        {
+            "text": "$(chevron-right)",
+            "command": "terminals.runTerminal",
+            "tooltip": "Run a terminal"
+        },
+        {
+            "text": "$(server) Compress JS",
+            "command": "terminals.runTerminalByName",
+            "arguments": [
+                "Compress JS"
+            ],
+            "tooltip": "压缩JS代码为.min.js",
+            "filterLanguageRegex": "JavaScript"
+        },
+        {
+            "text": "$(server) Compress CSS",
+            "command": "terminals.runTerminalByName",
+            "arguments": [
+                "Compress CSS"
+            ],
+            "tooltip": "压缩CSS代码为.min.css",
+            "filterLanguageRegex": "CSS"
+        },
+        {
+            "command": "workbench.action.reloadWindow",
+            "text": "$(alert)",
+            "tooltip": "Reload Window",
+            "color": "#FF00ff"
+        },
+        {
+            "command": "workbench.action.terminal.toggleTerminal",
+            "text": "$(terminal)",
+            "tooltip": "Terminal",
+            "color": "#0ff"
+        },
+        {
+            "command": "translator.translate",
+            "text": "$(book)",
+            "tooltip": "Translate",
+            "color": "#fff"
+        },
+        {
+            "command": "editor.action.sortLinesAscending",
+            "text": "$(arrow-up)",
+            "tooltip": "Sort lines",
+            "color": "#fff"
+        }
+    ],
+    "terminals.terminals": [
+        {
+            "name": "Compress JS",
+            "open": true,
+            "onlySingle": true,
+            "command": "java -jar C:/greenEnvironment/yuicompressor/2.4.8/main.jar --type js -o '.js$:.min.js' [file]"
+        },
+        {
+            "name": "Compress CSS",
+            "open": true,
+            "onlySingle": true,
+            "command": "java -jar C:/greenEnvironment/yuicompressor/2.4.8/main.jar --type css -o '.css$:.min.css' [file]"
+        }
+    ],
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "XDebug",
+                "type": "php",
+                "request": "launch",
+                "port": 9000
+            },
+            {
+                "name": "Launch currently open script",
+                "type": "php",
+                "request": "launch",
+                "program": "${file}",
+                "cwd": "${fileDirname}",
+                "port": 9000
+            }
+        ]
+    },
+    "workbench.startupEditor": "welcomePage",
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.quickSuggestionsDelay": 100,
+    "editor.find.autoFindInSelection": true,
+    "editor.autoIndent": true,
+    "files.encoding": "utf8",
+    "files.insertFinalNewline": true,
+    "files.hotExit": "onExit",
+    "editor.tabSize": 4
+}

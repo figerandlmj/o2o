@@ -52,7 +52,7 @@ class Token
         }
     }
 
-    protected static function getUidByToken()
+    public static function getUidByToken()
     {
         $uid = self::getCurrentTokenVar('uid');
         return $uid;

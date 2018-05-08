@@ -15,7 +15,7 @@ use app\lib\exception\ParameterException;
 class OrderPlace extends BaseValidate
 {
     protected $rule = [
-        '$products' => 'checkProducts'
+        'products' => 'checkProducts'
     ];
 
     protected $singleRule = [
