@@ -31,10 +31,8 @@ class Order extends BaseController
         
         //当前下订单的人
         $uid = Token::getUidByToken();
-
         $order = new OrderServer();
         $status = $order->place($oProducts, $uid);
-        
         return $status;
     }
 }
