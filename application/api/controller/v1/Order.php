@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: lenovo
@@ -19,7 +20,7 @@ class Order extends BaseController
     protected $beforeActionList = [
         'checkExclusiveScope' => ['only' => 'placeOrder'],
     ];
-    
+
     /**
      * [placeOrder 下单]
      */
@@ -28,11 +29,10 @@ class Order extends BaseController
         (new OrderPlace())->goCheck();
         //接收传过来的订单商品信息
         $oProducts = input('post.products/a');
-        
         //当前下订单的人
         $uid = Token::getUidByToken();
         $order = new OrderServer();
         $status = $order->place($oProducts, $uid);
-        return $status;
+        return json($status);
     }
 }

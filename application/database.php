@@ -17,12 +17,12 @@ return [
     //test
     'hostname' => '127.0.0.1',
     // 数据库名
-    'database' => 'o2o_new',
+    'database' => 'o2o',
     //'database' => 'test_chengtou',
     // 用户名
     'username' => 'root',
     // 密码
-    'password' => '123',
+    'password' => 'root',
     // 端口
     'hostport' => '3306',
 
