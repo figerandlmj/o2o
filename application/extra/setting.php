@@ -7,7 +7,7 @@
  */
 return [
     'img_path'    => 'http://local.o2o.com',
-    'crm_living'  => 'http://scgh.uutianfu.com/',
-    'crm_test'     =>'http://scgh.lilisou.com/',
+    'crm_living'  => 'http://www.baidu.com/',
+    'crm_test'     =>'http://www.baidu.com/',
     'exp_in_time' =>'7200',
 ];
